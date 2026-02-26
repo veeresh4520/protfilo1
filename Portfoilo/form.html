@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student form</title>
+    <link rel="stylesheet" href="Form.css">
+</head>
+<body>    
+  <form>
+    <h2>Student Admission Form</h2>
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter full Name" autofocus required >
+        <label> Email</label>
+        <input type="email" placeholder="@gmail.com" required>
+        <label>Password</label>
+        <input type="password" required>
+        <label>Mobile Number</label>
+        <input type="tel" required pattern="[0-9]{10}" placeholder="Enter 10 didgit number">
+        <label>Date of Birth</label>
+        <input type="date">
+        <label>Age</label>
+        <input type="number" min="17" max="100"> 
+     </fieldset>
+      <fieldset> 
+        <legend>Acadmeic Details</legend>       
+        <label>Course</label>
+        <select required>
+            <option value="">Select</option>
+            <option>B.teach</option>
+            <option>M.Teach</option>
+            <option>Degree</option>
+        </select>
+        <label>Branch</label>
+        <input type="text" list="Branches">
+        <datalist id="Branches">           
+            <option >CES</option>
+            <option>ECE</option>
+            <option>AI&DS</option>         
+        </datalist>
+        <label>Perceantage</label>
+        <input type="range" required min="40" max="99">
+      </fieldset>
+      <fieldset>
+        <legend>Prefererences</legend>
+        <label> Gender  </label><br>
+       male <input type="radio"  name="G">
+     <br>
+        Female<input type="radio" name="G">
+        <label>Languages</label><br>
+        Telugu<input type="checkbox">
+        Hindi<input type="checkbox">
+        Marathi <input type="checkbox">
+       English <input type="checkbox">
+      </fieldset>
+      <fieldset>
+        <legend>Upload Photo</legend>
+        <lable>Photo</lable>
+        <input type="file">
+        <textarea rows="5" cols="5"></textarea>
+      </fieldset><br>
+      <fieldset>
+        <legand>Password Details</legand><br>
+        <h3>Type Of Apllication</h3>
+        <label >New PassPort</label>
+        <input type="checkbox">
+        <label>Reissue</label>
+        <input type="checkbox">     
+  </form>  
+  <div class="but">
+   <button>Submit</button>
+   <button>Cancel</button>  
+  </div>
+</body>
+</html>

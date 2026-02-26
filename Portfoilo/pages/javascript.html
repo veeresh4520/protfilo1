@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+            background: linear-gradient(135deg, #737677, #c7f877, #2c5364);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+      .projects {
+    display: flex;
+    flex-direction: row;  
+    gap: 25px;
+    flex-wrap: wrap;      
+    justify-content: center;
+}
+
+        .card {
+          
+    flex: 0 0 45%;   
+    max-width: 45%;
+
+            background: #ffffff;
+            color: #333;
+            padding: 25px;
+            border-radius: 14px;
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .card a:hover {
+            background: linear-gradient(135deg, #0056b3, #003f7f);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE TITLE -->
+    <h1>My Projects</h1>
+
+    <!-- PROJECTS CONTAINER -->
+    <div class="projects">
+
+        <!-- PROJECT 1 -->
+        <div class="card">
+            <div class="card-title">Student Task Manager</div>
+
+            <div class="card-desc">
+                A JavaScript-based application that helps students
+                organize, track, and manage daily tasks efficiently.
+            </div>
+
+            <a href="task.html">View Project</a>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="card">
+            <div class="card-title">Counter App</div>
+
+            <div class="card-desc">
+                A simple JavaScript project to increase, decrease,
+                and reset a counter using DOM manipulation.
+            </div>
+
+            <a href="counter1.html">View Project</a>
+        </div>
+        <!--PROJECT 3-->
+        <div class="card">
+            <div class="card-title">Calculator</div>
+
+            <div class="card-desc">
+                A simple JavaScript calculator that performs basic arithmetic
+  operations like addition, subtraction, multiplication, and division.
+            </div>
+
+            <a href="calculator.html">View Project</a>
+        </div>
+        <!--project 4-->
+          <div class="card">
+            <div class="card-title">Dynamic Body</div>
+
+            <div class="card-desc">
+             Dynamic body in JavaScript means changing the web page content,
+  structure, or style in real time using JavaScript without reloading
+  the page.
+            </div>
+
+            <a href="dynamicBody.html">View Project</a>
+        </div>
+
+
+    
+    <!--project 5-->
+        <div class="card">
+            <div class="card-title">Age Guess</div>
+
+            <div class="card-desc">
+             An Age Guess application built using JavaScript that calculates and
+  displays the user’s age based on the entered date of birth.
+            </div>
+
+            <a href="guess.html">View Project</a>
+        </div>
+   
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DOM Manipulation</title>
+    </head>
+    <body>
+
+        <!--
+        <div id="card" class="container">
+            <h1><p><button><ul><li><li>
+        -->
+
+        <script>
+            // h1 element
+            const h1Element = document.createElement("h1");
+            h1Element.textContent = "HI!";
+            document.body.appendChild(h1Element);
+            h1Element.id = "heading";
+            h1Element.classList.add("main-heading");
+            
+            const h11 = document.createElement("h1");
+            h11.textContent = "HELLO! ";
+            document.body.appendChild(h11);
+            // p element
+            const pElement = document.createElement("p");
+            pElement.textContent = "HOW ARE YOU???";
+            document.body.appendChild(pElement);
+            const p = document.createElement("p");
+            
+            //pElement.setAttribute("id", "pvalue");
+            //pElement.setAttribute("class", "p-center"); 
+            
+            // or, another way
+            //pElement.id = "pvalue";
+            
+            //pElement.classList.add("py-4", "lead"); 
+            
+
+            p.textContent = "Paragraph on the web goes...p ppp ppppp alll dayy longggg";
+            document.body.appendChild(p);
+            // button element
+            const buttonElement = document.createElement("button");
+            buttonElement.textContent = "button on the web goes beeeppp beeppp beeppp bepp beeppp beeppp beepp beeep beeep ";
+            document.body.appendChild(buttonElement);
+            const b = document.createElement("button");
+            b.textContent = "button on the web goes beeeppp beeppp beeppp all day long ";
+            document.body.appendChild(b);
+            // onclick 
+            // event == trigger, Listener == action
+            
+            buttonElement.addEventListener("click", function(){
+                document.body.style.backgroundColor = "blue";
+                h1Element.style.color = "white"; 
+                pElement.style.color = "white"; 
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: linear-gradient( to left,rgb(184, 156, 156),rgb(224, 230, 43));
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+        height: 100vp;
+    }
+    label{
+        font-size: 80px;
+        padding: 10px;
+    }
+    button{
+        color: rgb(238, 238, 244);
+        font-size: large;
+        background-color: red;
+        border-radius: 25px;
+        box-shadow: 5px,5px,red;
+        width: 90px;
+        height: 50px;
+        margin: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        transition: all 0.3 ease;
+    }
+    button:hover{
+        /* transform: translate(5px,5px); */
+        transform: scale(1.2);
+        box-shadow: 5px 5px 5px red;
+    }
+    h1{
+        color: rgb(36, 39, 22);
+    }
+</style>
+<body>
+    <h1>Counter</h1>
+    <label id="number">0</label>
+    <div >
+        <button id="raise">Raise</button>
+        <button id="clear">Clear</button>
+        <button id="down">Down</button>
+
+    </div>
+    <h3 id="message">
+
+    </h3>
+    <script>
+       const labelValue =document.getElementById("number");
+       const raisebtn=document.getElementById("raise");
+       const clearbtn =document.getElementById("clear");
+       const downbtn = document.getElementById("down");
+       const M=document.getElementsByTagName("message");
+       let count=0;
+       raisebtn.onclick = function(){
+        count++;        
+        labelValue.textContent = count;
+        message.textContent="Counter Increamentation"
+       }
+       downbtn.onclick=function(){
+        if(count>0){
+        count--;
+        }
+        message.textContent="Counter Decreament"
+        labelValue.textContent=count;
+       }
+       clearbtn.onclick=function(){
+        if(count==0){
+            labelValue.textContent="its already Zero"
+        }else{
+        count=0;
+        labelValue.textContent=count;
+        }
+       }
+       
+      
+
+        
+        
+        
+        
+        </script>
+</body>
+</html>

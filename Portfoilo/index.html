@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veeresh · basic portfolio (no custom JS)</title>
+  <!-- Bootstrap 5 CSS + icons (no custom javascript) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- extremely minimal extra style (only spacing / cursors) -->
+  <style>
+    body {
+      background: linear-gradient(to bottom, #dde3a7, #d2c8c8);
+    }
+    .header-bg {
+      background-color: #fff9f9;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .skill-btn {
+      width: 100%;
+      background-color: white;
+      border: 1px solid #dee2e6;
+      transition: 0.1s;
+      font-weight: 600;
+      color: #0b2b4a;
+    }
+    .skill-btn:hover {
+      background-color: #f1f5f9;
+      border-color: #b0c4de;
+    }
+    /* social icons */
+    .social-icon {
+      font-size: 1.8rem;
+      color: #0080ff;
+      transition: opacity 0.2s;
+    }
+    .social-icon.github {
+      color: #005bc2;
+    }
+    .social-icon:hover {
+      opacity: 0.7;
+    }
+    /* certificate images: just responsive, no extra style */
+    .cert-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+    }
+    /* project cards inside collapse */
+    .project-card {
+      border: 1px solid #d1d9e6;
+      background-color: white;
+      transition: 0.1s;
+      height: 100%;
+    }
+    .project-card:hover {
+      background-color: #fafdff;
+    }
+    .mt-6 {
+      margin-top: 3rem;
+    }
+    .profile-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+.header-bg {
+  background: linear-gradient(to bottom, #666662, #e4cf69);
+  font-style: italic;
+  color: white;
+}
+.social-icon.github {
+  color: #24292e;
+}
+html {
+  scroll-behavior: smooth;
+}
+  </style>
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Veeresh ⚡ | Portfolio</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HEADER with name & social icons ========== -->
+<header class="header-bg shadow-sm">
+  <div class="container">
+    <div class="row align-items-center py-4">
+
+    
+      <div class="col-md-2 text-center mb-3 mb-md-0">
+       
+        <img 
+          src="images/myHalfImage.jpeg" 
+          alt="Veeresh profile photo"
+          class="profile-img">
+      </div>
+
+      <!-- CENTER: Name -->
+      <div class="col-md-7 text-center text-md-start">
+        <h1 class="name-title mb-1">Veeresh</h1>
+        <p class="subtitle mb-0" >
+          Computer Science Student · Aspiring Software Developer
+        </p>
+      </div>
+
+      <!-- RIGHT: Social Icons -->
+      <div class="col-md-3 text-center text-md-end mt-3 mt-md-0">
+        <div class="d-flex justify-content-center justify-content-md-end gap-3">
+          <a href="https://www.linkedin.com/in/veeresh-yadav-a469a0374/"
+             target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="bi bi-linkedin social-icon"></i>
+          </a>
+
+          <a href="https://github.com/veeresh4520"
+             target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="bi bi-github social-icon github"></i>
+          </a>
+          <a href="https://codeforces.com/profile/Veerrr" target="_blank"
+          rel="noopener noreferrer" aria-label="Codeforces">
+         <i class="bi bi-codeforces social-icon codeforces"></i>
+        </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<main class="container my-4">
+  <!-- ========== SKILLS section (buttons that open project collapses) ========== -->
+   <section id="home" class="py-5 text-center">
+  <h2 class="fw-bold">Welcome to My Portfolio</h2>
+  <p class="lead">Hi, I'm Veeresh. I love building software and solving problems.</p>
+</section>
+<section id="about" class="py-5">
+  <h2 class="h4 border-bottom pb-2">About Me</h2>
+  <p>
+    I am a Computer Science student passionate about programming,
+    problem solving and building real-world applications.
+    Currently learning Java, JavaScript and Data Structures.
+  </p>
+</section>
+<section id="education" class="py-5">
+  <h2 class="h4 border-bottom pb-2">Education</h2>
+  <ul class="list-group">
+    <li class="list-group-item">
+      B.Tech in ECE  - KLH 
+    </li>
+    <li class="list-group-item">
+      Intermediate – Narayan
+    </li>
+  </ul>
+</section>
+ <section id="skills" class="mt-2 py-5">
+    <h2 class="h4 pb-2 border-bottom border-2" style="font-style:oblique"> My skills</h2>
+    <div class="row g-3">
+      
+      <!-- skill 1: HTML & CSS -->
+
+     <div class="col-md-3 col-6">
+  <a href="pages/skills.html" target="_blank" class="btn skill-btn p-3">
+    HTML & CSS
+  </a>
+</div>
+      <!-- skill 2: JavaScript -->
+      <div class="col-md-3 col-6">
+       
+        <a href="pages/javascript.html" target="_blank" class="btn skill-btn p-3">
+          JAVA SCRIPT
+        </a>
+      </div>
+      <!-- skill 3: Java -->
+      <div class="col-md-3 col-6">
+       <a href="pages/java.html" target="_blank" class="btn skill-btn p-3">
+          Java
+          </a>
+   
+      </div>
+      <!-- skill 4: Python -->
+      <!-- <div class="col-md-3 col-6">
+        <button class="btn skill-btn p-3" type="button" data-bs-toggle="collapse" data-bs-target="#pythonCollapse" aria-expanded="false" aria-controls="pythonCollapse">
+          Python
+        </button>
+      </div> -->
+    </div>
+   <section id="cp" class="py-5">
+  <h2 class="h4 border-bottom pb-2">
+    💻 DSA & Competitive Programming
+  </h2>
+
+  <div class="row g-4 mt-3">
+
+    <!-- LeetCode -->
+    <div class="col-md-4">
+      <div class="card text-center shadow-sm h-100">
+        <div class="card-body">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+               alt="LeetCode Logo"
+               style="height:60px;" class="mb-3">
+          
+          <h5 class="card-title fw-bold">LeetCode</h5>
+          <p class="card-text">
+            Solved 30+ DSA Problems <br>
+            ⭐ Focused on Interview Preparation
+          </p>
+
+          <a href="https://leetcode.com/u/veeresh4520/"
+             target="_blank"
+             class="btn btn-dark">
+             View Profile
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Codeforces -->
+    <div class="col-md-4">
+      <div class="card text-center shadow-sm h-100">
+        <div class="card-body">
+          <img src="https://sta.codeforces.com/s/0/favicon-32x32.png"
+               alt="Codeforces Logo"
+               style="height:60px;" class="mb-3">
+          
+          <h5 class="card-title fw-bold">Codeforces</h5>
+          <p class="card-text">
+            solved 80+ problems 
+             <br>
+            Regular Contest Participant
+          </p>
+
+          <a href="https://codeforces.com/profile/Veerrr"
+             target="_blank"
+             class="btn btn-primary">
+             View Profile
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CodeChef -->
+    <div class="col-md-4">
+      <div class="card text-center shadow-sm h-100">
+        <div class="card-body">
+          <img src="https://cdn.codechef.com/images/cc-logo.svg"
+               alt="CodeChef Logo"
+               style="height:60px;" class="mb-3">
+          
+          <h5 class="card-title fw-bold">CodeChef</h5>
+          <p class="card-text">
+           solved 400+ problems <br>
+            Monthly Contest Explorer
+          </p>
+
+          <a href="https://www.codechef.com/users/veeresh_40039"
+             target="_blank"
+             class="btn btn-success">
+             View Profile
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Extra Interesting Section -->
+  <div class="mt-5 text-center">
+    <h5 class="fw-bold">🔥 Why I Love Competitive Programming</h5>
+    <p class="mt-3">
+      ✔ Improves problem-solving speed <br>
+      ✔ Builds algorithmic thinking <br>
+      ✔ Helps crack top product-based companies <br>
+      ✔ Makes coding fun & challenging
+    </p>
+  </div>
+
+</section>
+   
+
+  <!-- ========== CERTIFICATES section ========== -->
+  <section class="mt-6">
+    <h2 class="h4 pb-2 border-bottom border-2">📜 certificates</h2>
+    <div class="row g-3">
+      <!-- certificate image 1 (placeholder from picsum) -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <img src="images/certificate.png" alt="certificate sample 1" class="cert-img">
+      </div>
+
+    </div>
+  </section>
+  <section id="contact" class="py-5">
+  <h2 class="h4 border-bottom pb-2">Contact</h2>
+  <p>Email: veeresydava74103@gmail.com</p>
+  <p>Phone: +91 6304816113</p>
+</section>
+</main>
+
+<!-- simple footer -->
+<footer class="container mt-5 mb-3 text-muted text-center small">
+  © Veeresh – basic portfolio (no custom JavaScript)
+</footer>
+
+<!-- Bootstrap JS bundle (required for collapse toggles) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- no custom javascript – everything works with Bootstrap data-attributes -->
+</body>
+</html>

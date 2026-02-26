@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLH University</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e97b1b, #eaafd3);
+    text-align: center;
+}
+.box1 {
+    background: rgba(194, 19, 19, 0.2);
+    color: white;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 15px;   
+}
+/* CARDS LAYOUT */
+.cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    transition: all 0.3 ease;     
+}
+.cards:hover{
+    transform: translateX(-20px);
+    box-shadow: #e97b1b;
+}
+/* EACH CARD */
+.box4 {
+    background: rgba(255, 255, 255, 0.2);
+    width: 80%;               /* 2 columns */
+    padding: 25px;
+    margin: 20px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+/* BUTTON */
+.card-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6fa1;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* BUTTON HOVER */
+.card-button:hover {
+    background-color: #ff4f8b;
+}
+    </style>
+</head>
+<body>  
+    <div class="box1">
+        <h1>Welcome to KLH University - Bad System</h1>
+    </div>
+    <div class="cards">
+        <div class="box4">
+            <h2>Computer Science</h2>
+            <p>Unlock your potential in the world of technology and innovation at KLH University.</p>
+            <button class="card-button"> <a href=""></a>Learn More</button>
+        </div>
+
+        <div class="box4">
+            <h2>Engineering</h2>
+            <p>Build the future with our world-class engineering programs at KLH University.</p>
+            <button class="card-button">Learn More</button>
+        </div>
+
+        <div class="box4">
+            <h2>Business Studies</h2>
+            <p>Master the art of business and leadership at KLH University.</p>
+            <button class="card-button">Learn More</button>
+        </div>
+
+        <div class="box4">
+            <h2>Medicine</h2>
+            <p>Pursue a rewarding career in healthcare with KLH University's medical programs.</p>
+            <button class="card-button">Learn More</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

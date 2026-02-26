@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Menu Items</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .body-background{
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq4go6FchEQEPoM-1eq7fr2vmJ8JITOQUZXw&s"); */
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background: linear-gradient(135deg, #f4b115 0%, #764ba2 100%);
+}
+.main-container
+{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(189, 229, 216);
+    border-radius: 25px;
+    margin: 20px;
+    max-width: 90%;
+    border: 5px;
+    transition: all  0.3 ease;
+
+}
+.main-container:hover{
+    transform: translateY(-50px);
+    box-shadow: #f4b115;
+}
+.image-box
+{
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    border-radius: 30px;
+}
+h1{
+    font-family: Roboto;
+    color: dark blue;
+    text-align: center;
+    color: aliceblue;
+}
+.root-conatiner{
+    /* display:flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+}
+        </style>
+    </head>
+    
+    <body class="body-background">
+        <h1>Menu Items</h1>
+        <div class="root-conatiner">
+            <div class="main-container">
+            <div >
+                <a href="https://www.swiggy.com/city/hyderabad/hotel-sweekar-pure-veg-afzal-gunj-begum-bazaar-rest1162352">
+                <img class="image-box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHyrUu7qoGRNURfRYDZXpvbW1fmZBF3G46cg&s" alt="Indian Taali" >
+           </a>
+            </div>
+            <div class="item-details">
+                <h4>Indial Taali</h4>
+                <p>Delicious Rice cooked with vegetables and spices.</p>
+                <p>Price: ₹200</p>
+            </div>
+        </div>
+          <div class="main-container">
+            <div >
+                <a href="https://www.swiggy.com/search?query=vadav+pav">
+                <img class="image-box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5fQIjzyUD4OyQbTHXHGRIEDU49hXLKZyKvQ&s" alt="Indian Taali" >
+               </a>
+            </div>
+            <div class="item-details">
+                <h4>Vadav Pav</h4>
+                <p>Mumbais heart</p>
+                <p>Price: ₹200</p>
+            </div>
+        </div>
+          <div class="main-container">
+            <div >
+                <a href="https://www.swiggy.com/search?query=pav+bhaji">
+                <img class="image-box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTesqcN8gAIxFoqXuCCodLSwAk7L1E0GMDtiA&s" alt="Indian Taali" >
+            </a>
+            </div>
+            <div class="item-details">
+                <h4>Pav Bhaji</h4>
+                <p>Delicious Rice cooked with vegetables and spices.</p>
+                <p>Price: ₹250</p>
+            </div>
+        </div>
+        <div class="main-container">
+            <div >
+                <img class="image-box" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHyrUu7qoGRNURfRYDZXpvbW1fmZBF3G46cg&s" alt="Indian Taali" >
+            </div>
+            <div class="item-details">
+                <h4>Indial Taali</h4>
+                <p>Delicious Rice cooked with vegetables and spices.</p>
+                <p>Price: ₹200</p>
+            </div>
+        </div>
+    </div>
+        
+    </body>
+</html>
